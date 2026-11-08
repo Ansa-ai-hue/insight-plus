@@ -23,7 +23,7 @@ export default function Auth() {
 
         if (error) throw error;
         setMessage("Login successful!");
-        window.location.reload();
+        window.location.href = "/dashboard";
       } else {
         const { error } = await supabase.auth.signUp({
           email,
